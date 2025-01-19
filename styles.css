@@ -1,0 +1,247 @@
+/*This file is a mess.*/
+
+/*COLOR PALETTE
+7b67a6
+9d8bc2
+e8c7e6
+faf8ff
+*/
+
+.about_me{  
+    background-image: url("media/vdc.webp");
+    background-repeat: no-repeat;
+    background-position: 0% 0%; 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.drag {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+}
+
+.index{
+    background:#faf8ff;
+    background-image: url("media/mononoke_bg.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    background-size: 60%;
+    background-attachment: fixed;
+    position: relative;
+    color:#7b67a6;
+    font-family: 'basiic';
+}
+
+.index ::selection {
+    background: #e8c7e6;
+    color: #83568a;
+}
+
+.index a{
+    color:#7b67a6;
+    letter-spacing:1px;
+}
+
+.index a:hover{
+    color:#9d8bc2;
+}
+
+.h1_index{
+    text-transform:uppercase;
+    background: linear-gradient(0deg, #9d8bc2 0%, 
+    #9d8bc2 5%, #ebb7c200 5%, #f9a2f300 100%);
+    font-size:1.2em;
+    padding:1px;
+    padding-left:12px;
+    font-weight: bold;
+    letter-spacing:2px;
+    text-align:left;
+}
+
+.album_box {
+    position: absolute;
+    top: 150px; /* Set an initial top position */
+    left: 10%; /* Set an initial left position */
+    z-index: 9;
+    background-color: #faf8ff;
+    border: 1px solid #7b67a6;
+    text-align: center;
+    width: 220px;
+    height: 285px;
+}
+
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #7b67a6;
+    color: #fff;
+}
+
+#album_cover {
+    margin-top: 5px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #7b67a6;
+    animation: pulse_small 1s infinite steps(3);
+}
+
+#album_title {
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+hr{
+    color:#9d8bc2;
+    border-top:1px solid #9d8bc2;
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    width:70%;
+}
+
+span{
+    font-weight:bold;
+}
+
+p{
+    text-align:left;
+    margin:15px;
+}
+
+@font-face{
+    font-family: 'basiic';
+    src: url(media/fonts/basiic.ttf); /*made by cinni*/
+}
+
+.content{
+    margin: 0 0 0 0;
+    overflow: auto;
+    z-index: 1;
+    position: relative;
+    float: right;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    right: 20%;
+    margin-top: 40px;
+}
+
+.nav{
+    padding:5px;
+    background: #faf8ff;
+    border:1px solid #9d8bc2;
+    border-radius:2px;
+    margin:5px;
+    font-size:.9em;
+}
+
+.nav a{
+    margin:1px;
+    padding:1px;
+}
+
+.header{
+    padding:5px;
+    margin:5px;
+    font-size:1em;
+    color:#9d8bc2;
+    font-weight:Bold;
+    text-shadow: 0 0 5px white;
+    text-align:right;
+}
+
+.blog{
+    margin: 0 0 0 0;
+    padding:5px;
+    background: #faf8ff;
+    border:1px solid #9d8bc2;
+    border-radius:2px;
+    Margin:5px;
+    font-size:.9em;
+    height:80%;
+    overflow: auto;
+}
+
+.blog img{
+    width:auto;
+    max-width:80%;
+    height:auto;
+    margin:3px;
+}
+
+.icon{
+    max-width:100px;
+    max-height:100px;
+    border:1px solid #7b67a6;
+    float:right;
+    padding:1px;
+    margin:5px;
+    animation: pulse 2s infinite steps(6);
+}
+
+#love {
+    animation: pulse 1s infinite steps(2);
+}
+
+#spider {
+    border: 2px solid #7b67a6;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse_small {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s steps(100) infinite; /*swap steps(100) to linear for smooth animation*/
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-content img {
+    flex-shrink: 0;
+    width: 150px;
+}
